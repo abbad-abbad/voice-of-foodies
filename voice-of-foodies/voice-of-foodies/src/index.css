@@ -1,0 +1,99 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --orange: #E8521A;
+  --orange-light: #F47843;
+  --orange-dark: #C43E0D;
+  --cream: #FDF6EE;
+  --dark: #1A1208;
+  --dark-mid: #2E200F;
+  --text: #3D2B1A;
+  --text-light: #7A6050;
+  --border: #E8D8C8;
+  --white: #FFFFFF;
+  --success: #2D7A4F;
+  --error: #C0392B;
+  --shadow: 0 4px 24px rgba(26, 18, 8, 0.12);
+  --shadow-lg: 0 12px 48px rgba(26, 18, 8, 0.18);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 3px;
+}
+
+/* ===== UTILITY ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+/* ===== PAGE FADE IN ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fadeInUp 0.4s ease both;
+}

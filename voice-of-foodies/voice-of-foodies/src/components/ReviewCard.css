@@ -1,0 +1,202 @@
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow var(--transition), transform var(--transition);
+  animation: fadeInUp 0.35s ease both;
+}
+
+.review-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.review-card--editing {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(232,82,26,0.12);
+}
+
+.review-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.review-card__restaurant {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.review-card__category {
+  display: inline-block;
+  background: rgba(232,82,26,0.1);
+  color: var(--orange-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.review-card__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.rating-num {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.review-card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.review-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.review-card__meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reviewer-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.review-card__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-action:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: rgba(232,82,26,0.05);
+}
+.btn-action--danger { border-color: #F0C0B8; color: var(--error); }
+.btn-action--danger:hover { background: rgba(192,57,43,0.07); border-color: var(--error); }
+
+.confirm-text {
+  font-size: 0.82rem;
+  color: var(--error);
+  font-weight: 600;
+}
+
+/* Edit form */
+.edit-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Shared input styles (used in cards too) */
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.93rem;
+  color: var(--text);
+  background: var(--cream);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(232,82,26,0.12);
+  background: var(--white);
+}
+.textarea { resize: vertical; min-height: 90px; }
+
+.input-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+/* Shared button styles */
+.btn {
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: none;
+}
+.btn--primary {
+  background: var(--orange);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background: var(--orange-dark);
+  box-shadow: 0 4px 14px rgba(232,82,26,0.35);
+  transform: translateY(-1px);
+}
+.btn--ghost {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-light);
+}
+.btn--ghost:hover {
+  border-color: var(--text-light);
+  color: var(--text);
+}

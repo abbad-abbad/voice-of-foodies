@@ -1,0 +1,173 @@
+.reviews-page { padding-bottom: 80px; }
+
+.reviews-hero {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-mid) 100%);
+  padding: 60px 0 48px;
+  margin-bottom: 48px;
+}
+.reviews-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--cream);
+  margin-bottom: 10px;
+  letter-spacing: -0.8px;
+}
+.reviews-hero__sub { color: rgba(253,246,238,0.6); font-size: 1rem; }
+
+/* Layout */
+.reviews-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Panel */
+.panel-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: sticky;
+  top: 88px;
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.panel-sub {
+  font-size: 0.84rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+.panel-sub strong { color: var(--orange-dark); }
+
+.alert {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.87rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.alert--success {
+  background: rgba(45,122,79,0.1);
+  border: 1px solid rgba(45,122,79,0.3);
+  color: var(--success);
+}
+
+.review-form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 0.84rem; font-weight: 600; color: var(--text); }
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--cream);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(232,82,26,0.1);
+  background: var(--white);
+}
+.form-input--error { border-color: var(--error); }
+.textarea { resize: vertical; min-height: 100px; }
+.form-error { font-size: 0.79rem; color: var(--error); font-weight: 500; }
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: 4px;
+}
+.submit-btn:hover {
+  background: var(--orange-dark);
+  box-shadow: 0 4px 16px rgba(232,82,26,0.35);
+  transform: translateY(-1px);
+}
+
+/* Filters */
+.filters-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  background: var(--white);
+  color: var(--text);
+  transition: border-color var(--transition);
+}
+.search-input:focus { border-color: var(--orange); outline: none; }
+
+.filter-controls { display: flex; gap: 10px; flex-wrap: wrap; }
+.filter-select {
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.87rem;
+  background: var(--white);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+.filter-select:focus { border-color: var(--orange); outline: none; }
+
+.reviews-count {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Grid */
+.reviews-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Empty */
+.empty-state {
+  text-align: center;
+  padding: 72px 24px;
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+}
+.empty-state__icon { font-size: 3rem; margin-bottom: 16px; }
+.empty-state h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--dark); margin-bottom: 8px; }
+.empty-state p { color: var(--text-light); font-size: 0.92rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reviews-layout { grid-template-columns: 1fr; }
+  .panel-card { position: static; }
+}

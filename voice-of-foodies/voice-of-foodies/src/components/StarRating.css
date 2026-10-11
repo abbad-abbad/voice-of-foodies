@@ -1,0 +1,26 @@
+.stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  color: #DDD;
+  transition: color var(--transition), transform var(--transition);
+  line-height: 1;
+  user-select: none;
+}
+
+.star--filled { color: #F5A623; }
+
+.stars--interactive .star {
+  cursor: pointer;
+}
+.stars--interactive .star:hover,
+.stars--interactive .star--filled {
+  transform: scale(1.15);
+}
+
+/* Sizes */
+.stars--sm .star { font-size: 14px; }
+.stars--md .star { font-size: 20px; }
+.stars--lg .star { font-size: 28px; }
